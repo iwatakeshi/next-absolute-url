@@ -9,12 +9,9 @@ function absoluteUrl(req, localhostAddress, options) {
       https: false,
     }
   }
-  var _a
   var https = options.https
   var host =
-    (((_a = req) === null || _a === void 0
-    ? void 0
-    : _a.headers)
+    ((req === null || req === void 0 ? void 0 : req.headers)
       ? req.headers.host
       : window.location.host) || localhostAddress
   var protocol = https
